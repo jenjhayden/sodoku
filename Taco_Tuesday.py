@@ -1,22 +1,23 @@
 class Animal :
-    def __init__(dog,n,b,s):
-        dog.name=n
-        dog.breed=b
-        dog.weight=s
+    def __init__(self,n,b,s):
+        self.name=n
+        self.breed=b
+        self.weight=s
         
-    def introduce(dog):
-        print("Hi I'm ", dog.name, " and I am a ", dog.breed)
+    def introduce(self):
+        print("Hi, my name is ", self.name," and I am a", self.breed)
 
-    def size(dog):
-        if dog.weight<40 :
-            print("I am a small dog. I usually weigh under ", dog.weight, " pounds")
+    def size(self):
+        if self.weight<40 :
+            print("I am a small dog. I can fit in there.")
         else :
-            print("I am not a small dog")
+            print("Yeah.... you're going to need a bigger bag...")
 
-obj1= dog("Fifi","Shih Tzu",56)
-obj2= dog("Hawk","Poddle",25)
-obj1.introduce()
-obj1.size()
+dog1= Animal("Fifi","Brussells Grifton",12)
+dog2= Animal("Hawk","Siberian Husky",50)
 
-obj2.introduce()
-obj2.size()
+dog1.introduce()
+dog1.size()
+
+dog2.introduce()
+dog2.size()
